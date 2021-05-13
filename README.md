@@ -6,6 +6,19 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+To install dependencies 
+
+### `npm install`
+
+### `npm i express socket.io nodemon`
+
+### `yarn add simple-peer socket.io-client @material-ui/core @material-ui/icons react-copy-to-clipboard`
+
+To start the project 
+
+### `npm run dev`
+### `npm start`
+
 ### `yarn start`
 
 Runs the app in the development mode.\
