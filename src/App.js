@@ -3,6 +3,7 @@ import "./App.css"
 import Home from './components/Home'
 import User from './components/User'
 import Survey from './components/Survey'
+import Connect from './components/Connect'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
               <li class="about">
                 <Link to="/survey">Survey</Link>
               </li>
+              <li class="connect">
+                <Link to="/connect">Connect</Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -28,6 +32,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/user" component={User} />
               <Route exact path="/survey" component={Survey} />
+              <Route exact path="/connect" component={Connect} />
             </Switch>
           </div>
         </header>
