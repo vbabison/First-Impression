@@ -1,8 +1,10 @@
 import React from 'react';
 import "./Survey.css";
-
+import { useHistory } from 'react-router-dom';
 
 function Survey() {
+  let history = useHistory();
+
   return (
     <div>
       <div>
@@ -21,9 +23,8 @@ function Survey() {
           </div>
         </body>
       </div>
-      <textarea id="w3review" name="w3review" rows="4" cols="50" placeholder="Feedback"></textarea>
-      <button>Skip</button>
-      <button>Add friend</button>
+      <button onClick={() => {history.push("/");}}>Skip</button>
+      <button onClick={() => {history.push("/user");}}>Add friend</button>
     </div>
   )
 }

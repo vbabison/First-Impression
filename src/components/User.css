@@ -1,0 +1,29 @@
+.user-name {
+
+}
+
+.rating {
+
+}
+
+.connected {
+
+}
+
+.peaky {
+
+}
+
+.online {
+
+}
+
+.call-button {
+  font-size: 25px;
+}
+
+.user-profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

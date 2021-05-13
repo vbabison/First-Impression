@@ -5,6 +5,8 @@ import AssignmentIcon from "@material-ui/icons/Assignment"
 import PhoneIcon from "@material-ui/icons/Phone"
 import React, { useEffect, useRef, useState } from "react"
 import { CopyToClipboard } from "react-copy-to-clipboard"
+import { Redirect } from "react-router"
+import { useHistory } from 'react-router-dom';
 import Peer from "simple-peer"
 import io from "socket.io-client"
 
@@ -88,8 +90,11 @@ function Home() {
 
 	const leaveCall = () => {
 		setCallEnded(true)
-		connectionRef.current.destroy()
-	}
+    connectionRef.current.destroy()
+  }
+  
+  let history = useHistory();
+
   return (
     <>
 			<h1 style={{ textAlign: "center", color: '#fff' }}>First Impressions</h1>
@@ -128,7 +133,7 @@ function Home() {
 				/>
 				<div className="call-button">
 					{callAccepted && !callEnded ? (
-						<Button variant="contained" color="secondary" onClick={leaveCall}>
+						<Button variant="contained" color="secondary" onClick={() => {leaveCall(); history.push("/survey");}}>
 							End Call
 						</Button>
 					) : (
@@ -136,7 +141,7 @@ function Home() {
 							<PhoneIcon fontSize="large" />
 						</IconButton>
 					)}
-					{idToCall}
+					{name}
 				</div>
 			</div>
 			<div>

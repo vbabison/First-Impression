@@ -1,21 +1,17 @@
 import React from 'react';
+import "./User.css";
 
 function User() {
   return (
     <div>
-        <img src="./images/peaky.jpeg" />
-        <h1>Bobby</h1>
-        <p>Rating</p>
-        <p>Connections</p>
-        <p>Friend</p>
-        <p>Online</p>
-        <button>Connect</button>
-        <button>Call</button>
-        <h2>Reviews</h2>
-        <p>View all</p>
-        <h4>Hobbies</h4>
-        <h3>About me</h3>
-        <h4>about me....</h4>
+        <img src="./images/peaky.jpeg" class="peaky" />
+        <div class="user-profile">
+          <h1 class="user-name">Bobby</h1>
+          <p class="rating">Rating</p>
+          <p class="connected">Connections</p>
+          <p class="online">Online</p>
+        </div>
+        <button class="call-button">Call</button>
     </div>
   )
 }

@@ -7,7 +7,8 @@ CREATE TABLE users (
   password VARCHAR(255) NOT NULL,
   is_online BOOLEAN DEFAULT false,
   connections INTEGER ARRAY,
-  rating INTEGER ARRAY
+  rating INTEGER ARRAY,
+  caller_id VARCHAR(255) NOT NULL
 );
 
 GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO labber;
